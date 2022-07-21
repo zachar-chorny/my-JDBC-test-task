@@ -1,16 +1,6 @@
-# HW 02
+# JDBC test task
 
-## Project description
-The aim of current and following lessons is to create a basic `taxi service` project.
-Its' functionality should include: 
-* create new car/manufacturer
-* display all drivers/cars/cars by driver/manufacturers
-* add a driver to car
-
-First, you will create software representation of `driver`, `car`, `manufacturer` 
-and relations between them. To make this data long-term accessible DB is a must-have. And of course, we will add a User Interface layer to our app so you can easily manipulate the data. <br>
-But let's take one step at a time: in the current course, you will take care of the data storing part by implementing a layer in the application, here is your first task: 
-
+## Students task description:
 
 - Establish connection to your Database.
 - Create `init_db.sql` file in `src/main/resources` folder.
@@ -56,13 +46,5 @@ public class Manufacturer {
 `e.printStackTrace()` - is a bad practice! Let's create custom exception `DataProcessingException`
 and constructor with two parameters: `String message` and `Throwable ex`.  
 It should be extended from `RuntimeException`. You should rethrow this exception in `catch` block on dao layer.
-    
-#### DB connection error: 
-If you can't connect to your db because of this error: <br>
-`The server time zone value ‘EEST’ is unrecognized or represents more than one time zone`. <br>
-Try to set timezone explicitly in your connection URL. <br>
-Example: <br>
-`...localhost:3306/your_schema?serverTimezone=UTC` <br>
-Or you can set a timezone in MySql directly by running command: `SET GLOBAL time_zone = '+3:00'`;
 
 __You can check yourself using this__ [checklist](https://mate-academy.github.io/jv-program-common-mistakes/java-JDBC/jdbc-intro/JDBC-intro_checklist.html)
